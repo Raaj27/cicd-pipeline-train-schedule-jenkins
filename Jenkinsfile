@@ -2,7 +2,7 @@
 
 timestamps {
 
-node ('jenkins-windows') { 
+node () {
 
 	stage ('sample-gradle-build - Checkout') {
  	 checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'githubserver', url: 'https://github.com/Raaj27/cicd-pipeline-train-schedule-jenkins.git']]]) 
